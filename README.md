@@ -1,2 +1,1 @@
-# React
-java scrpit libraray
+React is javascrpit library

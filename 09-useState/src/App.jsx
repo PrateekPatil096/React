@@ -1,31 +1,25 @@
-import React from 'react'
-import { useState } from 'react'
+import React,{useState} from 'react'
 
 const App = () => {
 
-  const [num, setNum] = useState(0)
+  const [num, setNum] = useState({user:'pp',age:20})
 
-  function increaseNum(){
-  setNum(num+1)
+  const btnClicked=()=>{
+    const newNum={...num};
+    newNum.user='aa'
+   setNum(newNum)
 
   }
-  function decreaseNum(){
-    setNum(num-1)
-    
-  }
-   function jump5Num(){
-    setNum(num+5)
-   }
-
 
   return (
     <div>
-      <h1>{num}</h1>
-      <button onClick={increaseNum}>increase</button>
-      <button onClick={decreaseNum}>decrease</button>
-      <button onClick={jump5Num}>increase 5</button>
+      <h1>{num.user},{num.age}</h1>
+      <button onClick={btnClicked}>click</button>
     </div>
   )
 }
 
 export default App
+
+
+
